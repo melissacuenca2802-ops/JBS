@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pontos de Ônibus - JBS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 🔵 CABEÇALHO -->
+  <header class="hero">
+    <div class="logo">
+      <img src="IMG/Logo Nome.png" class="logo-img">
+      <span class="logo-text">TRANSPORTAL</span>
+    </div>
+
+    <div class="hero-content">
+      <h2>Consulta de Pontos de Ônibus</h2>
+      <p>Priorizando segurança e bem-estar dos colaboradores.</p>
+
+      <div class="botoes-acao">
+  <button id="btnHome">HOME</button>
+  <button id="btnVerHorarios">VER HORÁRIOS</button>
+  <button id="btnContato">CONTATO RH</button>
+</div>
+
+    </div>
+  </header>
+
+  <!-- 🚌 CAIXA DE FILTRO -->
+  <main>
+    <div id="caixahorarios" class="filtros">
+
+      <div class="filtro">
+        <label>Direção:</label>
+        <select id="direcao">
+          <option value="ida">Frigorífico ➝ Bairro</option>
+          <option value="volta">Bairro ➝ Frigorifico</option>
+    
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label>Escolha o bairro:</label>
+        <select id="bairro">
+          <option value="">-- Selecione --</option>
+          <option value="Popular">Popular</option>
+          <option value="Junqueira">Junqueira</option>
+          <option value="Pasetto">Pasetto</option>
+          <option value="Ribeiro">Ribeiro</option>
+          <option value="Reboucas">Rebouças</option>
+          <option value="Guaicara">Guaiçara / Sta Terezinha</option>
+          <option value="Centro">Centro</option>
+        </select>
+
+        <div class="grupo-botoes">
+    <button onclick="reconhecerVoz()">🎤 Falar Bairro</button>
+    <button onclick="lerHorarios()">🔊 Ouvir</button>
+    <button onclick="pararLeitura()">⏹️ Parar</button>
+    <button onclick="mostrarPontos()">Buscar</button>
+    
+</div>
+
+      </div>
+
+    </div>
+
+    <!-- 🟦 RESULTADOS -->
+    <section id="resultado" class="resultado"></section>
+  </main>
+
+  <footer class="footer-fixo">
+    <p>© Superação e Consciência</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- 🏠 HOME -->
+<section id="home" class="home">
+  <div class="home-conteudo">
+
+    <div class="home-texto">
+      <h2>Bem-vindo ao Transportal!</h2>
+
+      <p class="texto-intro">
+        Este portal foi desenvolvido para facilitar o acesso às informações de transporte
+        para todas as pessoas. Aqui você pode consultar, de forma clara e rápida, os trajetos,
+        horários e pontos de parada.
+         O portal é pensado para manter os dados de horários e trajetos sempre atualizados, garantindo mais segurança e organização no planejamento do seu deslocamento.
+Este formato de consulta foi criado para ser simples, visual e acessível, oferecendo autonomia para que todos possam acompanhar os horários  sem dificuldade.
+      </p>
+
+      <h3>Como usar o portal</h3>
+
+      <ol>
+        <li><strong>Selecione o bairro desejado</strong></li>
+        <li><strong>Visualize os horários</strong></li>
+        <li><strong>Confira os pontos do trajeto</strong></li>
+        <li><strong>Informações sempre atualizadas</strong></li>
+      </ol>
+    </div>
+
+    <div class="home-video">
+      <video controls class="video-libras">
+        <source src="IMG/Videolibras.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+
+  </div>
+</section>

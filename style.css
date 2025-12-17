@@ -1,0 +1,244 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+  background-image: url("IMG/Fundo.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0066c3, #00b4d8);
+  color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 80px;
+}
+
+.logo-text {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* Botões */
+.botoes-acao button {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: #004b8d;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.botoes-acao button:hover {
+  background: #003a6c;
+  color: white;
+}
+
+/* ===== FILTROS ===== */
+.filtros {
+  display: none;
+  margin: 40px auto;
+  max-width: 650px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.filtro label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filtro select,
+.filtro button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+/* ===== RESULTADO ===== */
+.resultado {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.resultado table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultado th {
+  background: #0066c3;
+  color: white;
+  padding: 10px;
+}
+
+.resultado td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.resultado tr:hover {
+  background: #e8f4ff;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #333;
+}
+.grupo-botoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.grupo-botoes button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: #1e88e5;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.grupo-botoes button:hover {
+  background: #1565c0;
+}
+/* ===== HOME ===== */
+.home {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.home-conteudo {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.home-texto {
+  max-width: 55%;   /* limita o texto */
+}
+
+.texto-intro {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Vídeo Libras */
+.home-video {
+  flex: 1;
+}
+
+.video-placeholder {
+  height: 600px;
+  border-radius: 15px;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #004b8d;
+}
+.video-libras {
+  width: 30%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.footer-fixo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0b3c5d; /* ajuste se quiser */
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* Evita que o conteúdo fique escondido atrás do footer */
+body {
+  padding-bottom: 50px;
+}
+.home {
+  padding: 60px 10%;
+}
+
+.home-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-texto {
+  flex: 1;
+
+}
+
+.home-texto h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.texto-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 500px; /* evita texto muito largo */
+}
+
+.home-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-libras {
+  width: 40%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+}
