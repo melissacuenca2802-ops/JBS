@@ -179,12 +179,6 @@ footer {
   font-weight: bold;
   color: #004b8d;
 }
-.video-libras {
-  width: 30%;
-  max-width: 420px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 .footer-fixo {
   position: fixed;
   bottom: 0;
@@ -253,8 +247,10 @@ body {
   }
 
   .video-libras {
-    width: 100%;
+    width: 150%;
     max-width: 320px;
     margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 }
+
