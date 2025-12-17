@@ -242,3 +242,19 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 50px rgba(0,0,0,0.2);
 }
+@media (max-width: 768px) {
+  .home-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-intro {
+    max-width: 100%;
+  }
+
+  .video-libras {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 20px;
+  }
+}
