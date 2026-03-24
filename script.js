@@ -1,4 +1,4 @@
-// ================================
+/ ================================
 //  BANCO COMPLETO DE HORÁRIOS
 // ================================
 const horarios = {
@@ -8,7 +8,11 @@ const horarios = {
   Ribeiro: [],
   Reboucas: [],
   Guaicara: [],
-  Centro: []
+  Centro: [],
+  Cafelandia: [],
+  Promissão: [],
+  Sabino: []
+
 };
 const horariosVolta = {
   Popular: [],
@@ -17,7 +21,10 @@ const horariosVolta = {
   Ribeiro: [],
   Reboucas: [],
   Guaicara: [],
-  Centro: []
+  Centro: [],
+  Cafelandia: [],
+  Promissão: [],
+  Sabino: []
 };
 
 // Analisar tabela enviada (já convertida para JS)
@@ -33,14 +40,30 @@ const tabelaHorarios = [
   ["01:45","Ribeiro",10],
   ["01:45","Rebouças",11],
   ["01:45","Guaiçara",9],
+  ["01:45","Br/Frig/Promissão","1 ou 2"],
 
   ["02:30","Ribeiro/Rebouças",10],
   ["02:30","Junqueira/Pasetto",12],
   ["02:30","Guaiçara/Sta Terezinha",9],
   ["02:30","Popular",14],
 
-  ["03:20","Completo 1",1],
-  ["03:20","Completo 2",2],
+  ["02:35","FRIG/Promissão","1 ou 2"],
+
+  ["03:20","Popular/completo 1",1],
+  ["03:20","Junqueira/completo 1",1],
+  ["03:20","Pasetto/completo 1",1],
+  ["03:20","Ribeiro/completo 1",1],
+  ["03:20","Reboucas/completo 1",1],
+  ["03:20","Guaicara/completo 1",1],
+  ["03:20","Centro/completo 1",1],
+  
+   ["03:20","Popular/completo 2",2],
+  ["03:20","Junqueira/completo 2",2],
+  ["03:20","Pasetto/completo 2",2],
+  ["03:20","Ribeiro/completo 2",2],
+  ["03:20","Reboucas/completo 2",2],
+  ["03:20","Guaicara/completo 2",2],
+  ["03:20","Centro/completo 2",2],
 
   ["04:00","Popular",14],
   ["04:00","Junqueira",12],
@@ -64,6 +87,10 @@ const tabelaHorarios = [
   ["04:40","Ribeiro 1",10],
   ["04:40","Ribeiro 2",10],
 
+  ["05:05","FRIG/BR/Promissão","1 ou 2"],
+  ["05:05","FRIG/Promissão","1 ou 2"],
+  ["05:15","BR/FRIG/Promissão","1 ou 2"],
+
   ["05:40","Guaiçara 1",9],
   ["05:40","Guaiçara 2",9],
   ["05:40","Junqueira 1",12],
@@ -76,19 +103,72 @@ const tabelaHorarios = [
   ["05:40","Rebouças 2",11],
   ["05:40","Ribeiro 1",10],
   ["05:40","Ribeiro 2",10],
+["05:40","BR/Promissão","1 ou 2"],
+
+  ["06:10","BR/FRIG/Cafelandia",8],
+  ["06:10","FRIG/Promissão","1 ou 2"],
 
   ["06:30","Ribeiro",10],
   ["06:30","Junqueira/Pasetto",13],
   ["06:30","Guaiçara/Sta Terezinha",9],
   ["06:30","Rebouças",11],
 
-  ["07:40","Completo 1",1],
-  ["07:40","Completo 2",2],
-  ["09:40","Completo 1",1],
-  ["09:40","Completo 2",2],
+  ["06:40","FRIG/Promissão","1 ou 2"],
+  ["06:40","BR/Sabino",7],
 
-  ["11:30","Completo 1",1],
-  ["11:30","Completo 2",2],
+ ["06:35","BR/FRIG/Cafelandia",8],
+
+  ["07:40","Popular/completo 1",1],
+  ["07:40","Junqueira/completo 1",1],
+  ["07:40","Pasetto/completo 1",1],
+  ["07:40","Ribeiro/completo 1",1],
+  ["07:40","Reboucas/completo 1",1],
+  ["07:40","Guaicara/completo 1",1],
+  ["07:40","Centro/completo 1",1],
+  ["07:40","FRIG/Promissão","1 ou 2"],
+
+  
+   ["07:40","Popular/completo 2",2],
+  ["07:40","Junqueira/completo 2",2],
+  ["07:40","Pasetto/completo 2",2],
+  ["07:40","Ribeiro/completo 2",2],
+  ["07:40","Reboucas/completo 2",2],
+  ["07:40","Guaicara/completo 2",2],
+  ["07:40","Centro/completo 2",2],
+
+   ["08:00","BR/FRIG/Cafelandia",8],
+
+  ["09:40","Popular/completo 1",1],
+  ["09:40","Junqueira/completo 1",1],
+  ["09:40","Pasetto/completo 1",1],
+  ["09:40","Ribeiro/completo 1",1],
+  ["09:40","Reboucas/completo 1",1],
+  ["09:40","Guaicara/completo 1",1],
+  ["09:40","Centro/completo 1",1],
+  
+   ["09:40","Popular/completo 2",2],
+  ["09:40","Junqueira/completo 2",2],
+  ["09:40","Pasetto/completo 2",2],
+  ["09:40","Ribeiro/completo 2",2],
+  ["09:40","Reboucas/completo 2",2],
+  ["09:40","Guaicara/completo 2",2],
+  ["09:40","Centro/completo 2",2],
+
+   ["11:30","Popular/completo 1",1],
+   ["11:30","Junqueira/completo 1",1],
+   ["11:30","Pasetto/completo 1",1],
+   ["11:30","Ribeiro/completo 1",1],
+   ["11:30","Reboucas/completo 1",1],
+   ["11:30","Guaicara/completo 1",1],
+   ["11:30","Centro/completo 1",1],
+
+      ["11:30","Popular/completo 2",2],
+   ["11:30","Junqueira/completo 2",2],
+   ["11:30","Pasetto/completo 2",2],
+   ["11:30","Ribeiro/completo 2",2],
+   ["11:30","Reboucas/completo 2",2],
+   ["11:30","Guaicara/completo 2",2],
+   ["11:30","Centro/completo 2",2],
 
   ["13:00","Popular",14],
   ["13:00","Junqueira",12],
@@ -103,6 +183,10 @@ const tabelaHorarios = [
   ["13:50","Ribeiro",10],
   ["13:50","Rebouças",11],
   ["13:50","Guaiçara",9],
+
+   ["14:30","BR/FRIG/Cafelandia",8],
+   ["14:40","FRIG/BR/Promissão","1 ou 2"],
+   ["14:40","FRIG/BR/Sabino",7],
 
   ["14:50","Popular",14],
   ["14:50","Junqueira",12],
@@ -119,6 +203,11 @@ const tabelaHorarios = [
   ["16:00","Guaiçara",9],
   ["16:00","Reforço - Centro",11],
   ["16:00","Reforço - Popular",14],
+  ["16:00","FRIG/BR/Promissão","1 ou 2"],
+
+   ["16:15","BR/FRIG/Cafelandia",8],
+   ["16:30","FRIG/Sabino",7],
+   ["16:40","FRIG/Promissão","1 ou 2"],
 
   ["16:45","Popular",14],
   ["16:45","Junqueira",12],
@@ -129,6 +218,12 @@ const tabelaHorarios = [
   ["16:45","Reforço - Centro",11],
   ["16:45","Reforço - Popular",14],
 
+   ["17:10","BR/FRIG/Cafelandia",8],
+   ["17:15","BR/FRIG/Promissão","1 ou 2"],
+   ["17:15","FRIG/BR/Sabino",7],
+   ["17:20","BR/FRIG/Promissão","1 ou 2"],
+   
+
   ["17:30","Popular",14],
   ["17:30","Junqueira",12],
   ["17:30","Pasetto",13],
@@ -137,19 +232,50 @@ const tabelaHorarios = [
   ["17:30","Guaiçara",9],
   ["17:30","Reforço",11],
 
+  ["17:40","FRIG/BR/Promissão","1 ou 2"],
+
+  ["18:10","FRIG/BR/Promissão","1 ou 2"],
+
   ["18:15","Popular",14],
   ["18:15","Junqueira",12],
   ["18:15","Pasetto",13],
   ["18:15","Ribeiro",10],
   ["18:15","Rebouças",11],
   ["18:15","Guaiçara",9],
+ ["18:15","BR/FRIG/Cafelandia",8],
+  
+   ["19:00","Popular/completo 1",1],
+   ["19:00","Junqueira/completo 1",1],
+   ["19:00","Pasetto/completo 1",1],
+   ["19:00", "Ribeiro/completo 1",1],
+   ["19:00","Reboucas/completo 1",1],
+   ["19:00","Guaicara/completo 1",1],
+   ["19:00","Centro/completo 1",1],
 
-  ["19:00","Completo 1",1],
-  ["19:00","Completo 2",2],
+      ["19:00","Popular/completo 2",2],
+   ["19:00","Junqueira/completo 2",2],
+   ["19:00","Pasetto/completo 2",2],
+   ["19:00","Ribeiro/completo 2",2],
+   ["19:00","Reboucas/completo 2",2],
+   ["19:00","Guaicara/completo 2",2],
+   ["19:00","Centro/completo 2",2],
 
-  ["19:50","Completo 1",1],
-  ["20:05","Completo 2",2],
+   ["19:0","Popular/completo 1",1],
+   ["19:50","Junqueira/completo 1",1],
+   ["19:50","Pasetto/completo 1",1],
+   ["19:50", "Ribeiro/completo 1",1],
+   ["19:50","Reboucas/completo 1",1],
+   ["19:50","Guaicara/completo 1",1],
+   ["19:50","Centro/completo 1",1],
 
+   ["20:05","Popular/completo 2",2],
+   ["20:05","Junqueira/completo 2",2],
+   ["20:05","Pasetto/completo 2",2],
+   ["20:05","Ribeiro/completo 2",2],
+   ["20:05","Reboucas/completo 2",2],
+   ["20:05","Guaicara/completo 2",2],
+   ["20:05","Centro/completo 2",2],
+ 
   ["21:05","Popular",14],
   ["21:05","Junqueira",12],
   ["21:05","Pasetto",13],
@@ -167,16 +293,45 @@ const tabelaHorarios = [
   ["22:40","Pasetto",13],
   ["22:40","Ribeiro",10],
   ["22:40","Rebouças",11],
-  ["22:40","Guaiçara",9]
+  ["22:40","Guaiçara",9],
+  ["22:40","FRIG/BR/Sabino",7],
+   ["22:40","BR/FRIG/Cafelandia",8],
+   ["22:50","FRIG/BR/Promissão","1 ou 2"]
 ];
 
 // Distribuir horários nos bairros automaticamente
 tabelaHorarios.forEach(([hora, trajeto, plataforma]) => {
-  const destino = trajeto.split("/")[0].trim();
 
-  if (horarios[destino]) {
-    horarios[destino].push({ hora, trajeto, plataforma });
-  }
+  const bairros = trajeto.split("/");
+
+  bairros.forEach(bairro => {
+    bairro = bairro.trim();
+
+    // remover "Reforço - "
+    bairro = bairro.replace("Reforço - ", "");
+
+    // remover números (1, 2...)
+    bairro = bairro.replace(/\d+/g, "").trim();
+
+    // ignorar completos (importante!)
+    if (bairro.toLowerCase().includes("completo")) return;
+
+    // padronização
+    if (bairro.includes("Rebou")) bairro = "Reboucas";
+    if (bairro.includes("Guai")) bairro = "Guaicara";
+    if (bairro.includes("Sta")) bairro = "Guaicara";
+
+    // 🔥 GARANTE QUE EXISTE
+    if (!horarios[bairro]) return;
+
+    horarios[bairro].push({
+      hora: hora,
+      trajeto: trajeto,
+      plataforma: plataforma
+    });
+
+  });
+
 });
 const pontosBairroParaFrigorifico = {
   Guaicara: [
